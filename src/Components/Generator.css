@@ -1,0 +1,58 @@
+.generator-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  margin: 4rem 0;
+  width: 100vw;
+  
+}
+.heading {
+  font-weight: 400;
+  font-size: 3rem;
+  font-family: Lalezar;
+  text-align: center;
+  font-family: "Lalezar";
+}
+.special-text {
+  color: #00ffff;
+}
+.buttons-container {
+  display: flex;
+  gap: 1.5rem;
+  margin: 1.25px 0;
+  font-family: Inter;
+}
+.btn {
+  width: 28rem;
+padding: 1.5rem 0;
+  /* margin: 48px 25px 20px 0; */
+  background: #8e8e8e21;
+  color: white;
+  border: none;
+  font-family: inter;
+  border-radius: 15px;
+  font-size: 1.5rem;
+  font-weight: 400;
+}
+
+
+@media  (max-width:532px) {
+.heading{
+    font-size: 1.25rem;
+}
+.buttons-container{
+    gap: 0.75rem;
+}
+.btn{
+width: 9rem;
+font-size: 1rem;
+padding: 0.7rem 0.25rem;
+}
+.generator-container{
+    margin: 2rem 0;
+    gap: 1rem;
+}
+}
+
