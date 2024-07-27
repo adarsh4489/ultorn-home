@@ -11,12 +11,12 @@ const Textgenerator = () => {
           <textarea name="prompt" placeholder='Enter Your prompt for describing features' id="prompt" rows={12} cols={90}></textarea>
           <div className="gender">
             <h2>Choose Gender</h2>
-            <div className="male">
-              <img src={male} alt="" />
+            <div className="male category">
+              <img className='gender-sign' src={male} alt="" />
               <p>Male</p>
             </div>
-            <div className="female">
-              <img src={female} alt="" />
+            <div className="female category">
+              <img className='gender-sign' src={female} alt="" />
               <p>Female</p>
             </div>
           </div>
