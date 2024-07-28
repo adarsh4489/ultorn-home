@@ -25,7 +25,7 @@
     justify-content: center;
     align-items: center;
     width: 100%;
-    padding: 0 1rem;
+    padding: 0.25rem 1rem;
        gap: 1rem;
 }
 #prompt{
@@ -71,7 +71,7 @@
     display: flex;
     width: 35%;
     border-radius: 0.8rem;
-    padding: 0.75rem 0;
+    padding: 0.5rem 0;
     flex-direction: column;
     justify-content: center;
     align-items: center;
@@ -104,7 +104,7 @@
 }
 
 .gender-sign{
-    width: 30%;
+    width: 20px;
 }
 
 .suggestions-container{
@@ -126,7 +126,7 @@ display: none;
 .generate-btn{
     background: linear-gradient(90deg,#66C4D9 ,#FFC107);
     width: 80%;
-    padding: 0.5rem;
+    padding: 0.75rem;
     border-radius: 0.75rem;
     font-size: 1.3rem;
     display: flex;
@@ -170,13 +170,8 @@ gap: 0.5rem;
     font-size: 1rem;
 font-family: inter;
 }
-.gender-sign{
-    width: 10px;
-}
 .suggestions-container{
     display: flex;
-    justify-content: center;
-    align-items: center;
     gap: 0.5rem;
     margin: 0 0.25rem;
 }
@@ -191,13 +186,26 @@ font-family: inter;
 
 .category{
     font-size: 0.8rem;
-    padding: 0.5rem 2.75rem
+    padding: 0.5rem 2.75rem;
 }
+.category:hover{
+    cursor: pointer;
+    box-shadow: inset 0 0 2rem #ffffff;
+
+}
+
+
 
 }
 
 @media  (min-width:533px) and (max-width:768)
 {
-
+.suggestions-container{
+    display: flex;
+    gap: 0.5rem;
+    margin: 0 0.25rem;
+}
 
 }
+
+

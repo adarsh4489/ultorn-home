@@ -1,5 +1,5 @@
 import React from 'react'
-import './Textgenerator.css'
+import './Textgenerator2.css'
 import male from '../assets/malesign.png'
 import female from '../assets/female sign.png'
 import upload from '../assets/upload.png';
