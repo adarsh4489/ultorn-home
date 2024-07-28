@@ -2,36 +2,40 @@ import React from 'react'
 import './Cards.css'
 import Mycard from './Mycard'
 
-const Cards = () => {
+const Cards = (props) => {
 
-  const data=[
-  {
-    background: "",
-    description: " ipsum dolor sit amet consectetur adipisicing elit. Nisi, at aut neque officia aspernatur ipsum provident obcaecati cupiditate nulla illo nobis laborum voluptatibus, sit soluta."
-  },
-  {
-    background: "",
-    description: " ipsum dolor sit amet consectetur adipisicing elit. Nisi, at aut neque officia aspernatur ipsum provident obcaecati cupiditate nulla illo nobis laborum voluptatibus, sit soluta."
-  },
-  {
-    background: "",
-    description: " ipsum dolor sit amet consectetur adipisicing elit. Nisi, at aut neque officia aspernatur ipsum provident obcaecati cupiditate nulla illo nobis laborum voluptatibus, sit soluta."
-  },
-  {
-    background: "",
-    description: " ipsum dolor sit amet consectetur adipisicing elit. Nisi, at aut neque officia aspernatur ipsum provident obcaecati cupiditate nulla illo nobis laborum voluptatibus, sit soluta."
-  },
-  {
-    background: "",
-    description: " ipsum dolor sit amet consectetur adipisicing elit. Nisi, at aut neque officia aspernatur ipsum provident obcaecati cupiditate nulla illo nobis laborum voluptatibus, sit soluta."
-  },
-  {
-    background: "",
-    description: " ipsum dolor sit amet consectetur adipisicing elit. Nisi, at aut neque officia aspernatur ipsum provident obcaecati cupiditate nulla illo nobis laborum voluptatibus, sit soluta."
-  },
-  
-  {}
-]
+     const mydata=[
+        {
+            id:1,
+            url:"",
+            description:" Lorem ipsum, dolor sit amet consectetur adipisicing elit. Architecto nihil aut fugiat quasi quos.",
+        },
+        {
+            id:2,
+            url:"",
+            description:" Lorem ipsum, dolor sit amet consectetur adipisicing elit. Architecto nihil aut fugiat quasi quos.",
+        },
+        {
+            id:3,
+            url:"",
+            description:" Lorem ipsum, dolor sit amet consectetur adipisicing elit. Architecto nihil aut fugiat quasi quos.",
+        },
+        {
+            id:4,
+            url:"",
+            description:" Lorem ipsum, dolor sit amet consectetur adipisicing elit. Architecto nihil aut fugiat quasi quos.",
+        },
+        {
+            id:5,
+            url:"",
+            description:" Lorem ipsum, dolor sit amet consectetur adipisicing elit. Architecto nihil aut fugiat quasi quos.",
+        },
+        {
+            id:6,
+            url:"",
+            description:" Lorem ipsum, dolor sit amet consectetur adipisicing elit. Architecto nihil aut fugiat quasi quos.",
+        },
+    ];
 
   return (
     <div className='cards-wrapper'>
@@ -40,7 +44,14 @@ const Cards = () => {
         <button className='featured-btn'>Featured</button>
       </div>
       <div className="cards-container">
-      
+        {
+           mydata.map((item)=>{
+                return(
+                    <Mycard></Mycard>
+                )
+            })
+        }
+     
       </div>
     </div>
   )

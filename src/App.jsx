@@ -9,9 +9,9 @@ import './App.css'
 const App = () => {
   return (
     <div>
-      {/* <Navbar></Navbar>
+      <Navbar></Navbar>
       <Generator></Generator>
-      <Textgenerator></Textgenerator> */}
+      <Textgenerator></Textgenerator>
 
 <Cards></Cards>
     </div>
