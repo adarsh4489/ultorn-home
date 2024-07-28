@@ -7,6 +7,9 @@ import dots from '../assets/three dots.png'
 
 const Cards = (props) => {
 
+
+  
+
      const mydata=[
         {
             id:1,
