@@ -1,8 +1,11 @@
-import React from 'react'
+import React, { useState } from 'react'
 import './Generator.css'
 
 
 const Genrator = () => {
+  // const[container,SetContainer]=useState(true)
+
+
   return (
     <div className="generator-container">
       <div>
@@ -12,7 +15,7 @@ const Genrator = () => {
         </h1>
       </div>
       <div className="buttons-container">
-        <button className="btn">Text-to-3D</button>
+        <button className="btn" >Text-to-3D</button>
         <button className="btn">Image-to-3D</button>
       </div>
     </div>

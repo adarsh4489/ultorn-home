@@ -3,7 +3,6 @@ import './Cards.css'
 import boyImage from '../assets/character boy.png'
 import girlImage from '../assets/character girl.png'
 import newBoy from '../assets/boy2.png'
-import smallCharacter from '../assets/small character boy.png'
 import dots from '../assets/three dots.png'
 
 const Cards = (props) => {
@@ -52,8 +51,6 @@ const Cards = (props) => {
     ];
 
     
-
-
   return (
     <div className='cards-wrapper'>
       <div className="card-selection-btn">
