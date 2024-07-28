@@ -19,12 +19,15 @@
     padding: 0.75rem 0;
     color: white;
     border-radius: 10px;
+    font-weight: 700;
+    font-size: 1.25rem;
+    font-family: inter;
 background: transparent;
 border: 1px solid white;
 font-family: inter;
 }
 .cards-container{
-    border: 1px solid white;
+    /* border: 1px solid white; */
     width: 90%;
     display: flex;
     justify-content: center;
@@ -32,4 +35,63 @@ font-family: inter;
     flex-wrap: wrap;
     padding: 0.5rem;
     gap: 0.75rem;
+    
+}
+.my-card-wrapper{
+    width: 24%;
+    height: 60vh;
+    display: flex;
+flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    border-radius: 2.25rem;
+
+}
+.my-card-wrapper img{
+    width: 0.25rem;
+    margin: 1.5rem;
+    position: absolute;
+    top: -0.25rem;
+    right: -0.25rem;
+}
+.description
+{  
+  background: rgba(2, 2, 2, 0.452);
+  backdrop-filter: blur(2px);
+  color: white;
+  padding: 10px;
+  border-radius: 0 0 15px 15px;
+  text-align: center;
+  width: 90%;
+  font-size: 0.9rem;
+  border-radius: 1rem;
+  margin-bottom: 2rem ;
+  box-sizing: border-box;
+  font-weight: 500;
+}
+
+@media (max-width:532px) {
+    .cards-container{
+       width: 95%;
+       /* padding: 0.5rem; */
+       gap: 0.5rem;
+    }
+      .my-card-wrapper:nth-child(n+7) {
+    display: none;
+      }
+      .my-card-wrapper{
+        width: 31.95%;
+        height: 40vh;
+        border-radius: 8px;
+      }
+      .description{
+        margin-bottom: 0.5rem ;
+        padding: 0.25rem;
+        font-size: 0.75rem;
+      }
 }

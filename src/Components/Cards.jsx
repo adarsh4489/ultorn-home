@@ -1,41 +1,58 @@
 import React from 'react'
 import './Cards.css'
-import Mycard from './Mycard'
+import boyImage from '../assets/character boy.png'
+import girlImage from '../assets/character girl.png'
+import newBoy from '../assets/boy2.png'
+import smallCharacter from '../assets/small character boy.png'
+import dots from '../assets/three dots.png'
 
 const Cards = (props) => {
 
      const mydata=[
         {
             id:1,
-            url:"",
+            url:boyImage,
             description:" Lorem ipsum, dolor sit amet consectetur adipisicing elit. Architecto nihil aut fugiat quasi quos.",
         },
         {
             id:2,
-            url:"",
+            url:girlImage,
             description:" Lorem ipsum, dolor sit amet consectetur adipisicing elit. Architecto nihil aut fugiat quasi quos.",
         },
         {
             id:3,
-            url:"",
+            url:newBoy,
             description:" Lorem ipsum, dolor sit amet consectetur adipisicing elit. Architecto nihil aut fugiat quasi quos.",
         },
         {
             id:4,
-            url:"",
+            url:girlImage,
             description:" Lorem ipsum, dolor sit amet consectetur adipisicing elit. Architecto nihil aut fugiat quasi quos.",
         },
         {
             id:5,
-            url:"",
+            url:boyImage,
             description:" Lorem ipsum, dolor sit amet consectetur adipisicing elit. Architecto nihil aut fugiat quasi quos.",
         },
         {
             id:6,
-            url:"",
+            url:newBoy,
+            description:" Lorem ipsum, dolor sit amet consectetur adipisicing elit. Architecto nihil aut fugiat quasi quos.",
+        },
+        {
+            id:7,
+            url:boyImage,
+            description:" Lorem ipsum, dolor sit amet consectetur adipisicing elit. Architecto nihil aut fugiat quasi quos.",
+        },
+        {
+            id:8,
+            url:girlImage,
             description:" Lorem ipsum, dolor sit amet consectetur adipisicing elit. Architecto nihil aut fugiat quasi quos.",
         },
     ];
+
+    
+
 
   return (
     <div className='cards-wrapper'>
@@ -47,7 +64,12 @@ const Cards = (props) => {
         {
            mydata.map((item)=>{
                 return(
-                    <Mycard></Mycard>
+                   <div key={item.id}  className='my-card-wrapper'  style={{ backgroundImage: `url(${item.url})` }} >
+     <img src={dots} alt="" />
+      {item.id % 2 === 0 && <div className="description">{item.description}</div>}
+
+      
+    </div>
                 )
             })
         }
