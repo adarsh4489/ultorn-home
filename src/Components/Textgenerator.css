@@ -100,7 +100,7 @@
 }
 
 .female{
-    background-color: #FF0DBB;
+    background-color: #853576;
 }
 
 .gender-sign{
@@ -162,8 +162,8 @@ display: none;
     padding: 2.5rem 1rem;
 }
 .gender{
-padding: 1.5rem 1.1rem;
-gap: 1.25rem;
+padding: 2rem 1.1rem;
+gap: 0.5rem;
 
 }
 .gender h2{

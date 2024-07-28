@@ -1,0 +1,29 @@
+.cards-wrapper{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100vw;
+    gap: 1rem;
+    margin: 1rem 0;
+}
+.card-selection-btn{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 70%;
+    gap: 2rem;
+}
+.featured-btn{
+    width: 40%;
+    padding: 0.75rem 0;
+    color: white;
+    border-radius: 10px;
+background: transparent;
+border: 1px solid white;
+font-family: inter;
+}
+.cards-container{
+    border: 1px solid white;
+    width: 90%;
+}
