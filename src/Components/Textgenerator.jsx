@@ -1,10 +1,8 @@
 import React from 'react'
-import './Textgenerator2.css'
+import './Textgenerator.css'
 import male from '../assets/malesign.png'
 import female from '../assets/female sign.png'
 import upload from '../assets/upload.png';
-import Girl from '../assets/girl.png';
-import Boy from '../assets/boy.png';
 
 const Textgenerator = () => {
   

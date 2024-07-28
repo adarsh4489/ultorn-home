@@ -43,7 +43,8 @@
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    border: 1px solid white;
+     background: #8e8e8e26;
+    
     gap: 10px;
     padding: 3.5rem 1rem;
     color: rgba(255, 255, 255, 0.527);

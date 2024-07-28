@@ -4,10 +4,10 @@ import boyImage from '../assets/character boy.png'
 import girlImage from '../assets/character girl.png'
 import newBoy from '../assets/boy2.png'
 import dots from '../assets/three dots.png'
+import design1 from '../assets/design1.png'
+import planet from '../assets/design2.png'
 
 const Cards = (props) => {
-
-
   
 
      const mydata=[
@@ -59,7 +59,10 @@ const Cards = (props) => {
       <div className="card-selection-btn">
         <button className='featured-btn'>My Avatar</button>
         <button className='featured-btn'>Featured</button>
+        <img src={design1} className='design' alt="" />
       </div>
+
+        <img src={planet} className='planet' alt="" />
       <div className="cards-container">
         {
            mydata.map((item)=>{

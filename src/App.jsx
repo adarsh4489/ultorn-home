@@ -10,6 +10,7 @@ const App = () => {
   return (
 
     <div>
+    
       <Navbar></Navbar>
       <Generator></Generator>
       <Textgenerator></Textgenerator>

@@ -116,7 +116,7 @@ position: fixed;
 .modal-container{
     width: 30%;
     padding: 1rem;
-
+border-radius: 8px;
     background: #001730;
 color: white;
 display: flex;
@@ -142,8 +142,12 @@ right: 0;
     width: 95%;
     background: transparent;
     padding: 0.75rem ;
+    color: white;
+    border-radius: 4px;
 }
-
+.modal-container input::placeholder{
+    color: white;
+}
 @media  (max-width:780px) {
     
     .nav-links{
