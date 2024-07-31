@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import brand from "../assets/brand logo.png";
 import coin from "../assets/coin.png";
 import login from "../assets/login icon.png";
@@ -13,6 +13,29 @@ const Navbar = () => {
   const [showModal, setShowModal] = useState(false);
   const [settingVisibility, setSettingVisibility] = useState(false);
   const [showMenu, setShowMenu] = useState(false);
+  const dropdownRef = useRef(null);
+  const menuRef = useRef(null);
+
+  const handleClickOutside = (event) => {
+    if (dropdownRef.current && !dropdownRef.current.contains(event.target)) {
+      setSettingVisibility(false);
+    }
+    if (menuRef.current && !menuRef.current.contains(event.target)) {
+      setShowMenu(false);
+    }
+  };
+
+  useEffect(() => {
+    if (settingVisibility || showMenu) {
+      document.addEventListener("mousedown", handleClickOutside);
+    } else {
+      document.removeEventListener("mousedown", handleClickOutside);
+    }
+
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside);
+    };
+  }, [settingVisibility, showMenu]);
 
   const apiModal = () => (
     <div className="modal-wrapper">
@@ -35,7 +58,7 @@ const Navbar = () => {
   );
 
   const MyMenu = () => (
-    <div className="nav-menu-wrapper">
+    <div className="nav-menu-wrapper" ref={menuRef}>
       <ul>
         <li><a href="#">Home</a></li>
         <li><a href="#">Docs</a></li>
@@ -72,7 +95,7 @@ const Navbar = () => {
           {showMenu && <MyMenu />}
 
           {settingVisibility && (
-            <div className="api-setting">
+            <div ref={dropdownRef} className="api-setting">
               <div className="api-key api-desc" onClick={() => setShowModal(true)}>
                 <img src={key} alt="API Key" />
                 <p>API Key</p>

@@ -226,11 +226,14 @@ font-size: 16px;
         top: 3.5rem;
         right: 1rem;
     }
+    .api-setting img{
+        width: 13%;
+    }
 .modal-wrapper{
     width: 100vw;
 }
 .modal-container{
-    width: 80%;
+    width: 70%;
 }
 
 }
