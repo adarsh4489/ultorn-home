@@ -17,7 +17,7 @@
 .featured-btn{
     width: 40%;
     position: relative;
-    padding: 0.75rem 0;
+    padding: 0.75rem 0rem;
     color: white;
     border-radius: 10px;
     font-weight: 700;
@@ -91,6 +91,7 @@ flex-direction: column;
   font-weight: 500;
 }
 
+
 @media (max-width:600px) {
     .cards-container{
        width: 100%;
@@ -114,17 +115,20 @@ flex-direction: column;
         padding: 0.25rem;
         font-size: 0.75rem;
       }
+      .featured-btn{
+        font-size: 1rem;
+      }
 }
 
 
-@media (min-width:533px)and (max-width:900px) {
+@media (min-width:601px)and (max-width:900px) {
     .my-card-wrapper:nth-child(n+7) {
     display: none;
       }
        .my-card-wrapper{
         width: 31.95%;
-        height: 30vh;
-        border-radius: 14px;
+        height: 50vh;
+        border-radius: 2.5rem;
       }.description{
         margin-bottom: 0.5rem ;
         padding: 0.25rem;

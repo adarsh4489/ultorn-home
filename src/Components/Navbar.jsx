@@ -4,30 +4,44 @@ import coin from "../assets/coin.png";
 import login from "../assets/login icon.png";
 import drop from "../assets/drop down icon.png";
 import menu from "../assets/menu.png";
-import cross from "../assets/cross.png"
-import "./Navbar.css";
+import cross from "../assets/cross.png";
 import key from "../assets/key.png";
 import logout from "../assets/logout.png";
+import "./Navbar.css";
 
 const Navbar = () => {
   const [showModal, setShowModal] = useState(false);
   const [settingVisibility, setSettingVisibility] = useState(false);
+  const [showMenu, setShowMenu] = useState(false);
 
   const apiModal = () => (
-   <div className="modal-wrapper">
-     <div className="modal-container">
-      <div className="row">
-        <h3 className="modal-heading">Profile Setting</h3>
-        <img src={cross} alt="cross button" onClick={() => setShowModal(false)}/>
+    <div className="modal-wrapper">
+      <div className="modal-container">
+        <div className="row">
+          <h3 className="modal-heading">Profile Setting</h3>
+          <img src={cross} alt="cross button" onClick={() => setShowModal(false)} />
+        </div>
+        <form action="">
+          <label htmlFor="email">E-mail Address</label>
+          <br />
+          <input type="text" placeholder="abcd@gmail.com" />
+          <br />
+          <label htmlFor="api-key">API Key</label>
+          <br />
+          <input type="text" placeholder="abcd@gmail.com" />
+        </form>
       </div>
-      <form action="">
-        <label htmlFor="email">E-mail Address</label><br />
-        <input type="text" placeholder="abcd@gmail.com" /><br />
-        <label htmlFor="api-key">API Key</label><br />
-        <input type="text" placeholder="abcd@gmail.com" />
-      </form>
     </div>
-   </div>
+  );
+
+  const MyMenu = () => (
+    <div className="nav-menu-wrapper">
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Docs</a></li>
+        <li><a href="#">Pricing</a></li>
+      </ul>
+    </div>
   );
 
   const apiSetting = () => {
@@ -53,7 +67,9 @@ const Navbar = () => {
         <div className="login">
           <img className="login-icon" src={login} alt="Login" />
           <img className="drop" onClick={apiSetting} src={drop} alt="Drop" />
-          <img className="menu-bar" src={menu} alt="Menu Bar" />
+          <img onClick={() => setShowMenu(!showMenu)} className="menu-bar" src={menu} alt="Menu Bar" />
+
+          {showMenu && <MyMenu />}
 
           {settingVisibility && (
             <div className="api-setting">
