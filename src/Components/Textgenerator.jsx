@@ -1,4 +1,3 @@
-/* eslint-disable react/prop-types */
 import { useState, useRef } from "react";
 import "./Textgenerator.css";
 import maleIcon from "../assets/malesign.png";
@@ -7,7 +6,7 @@ import uploadIcon from "../assets/upload.png";
 
 const Textgenerator = ({ mode }) => {
   const [selectedFile, setSelectedFile] = useState(null);
-  const fileInputRef = useRef(null); // Create a reference for the file input
+  const fileInputRef = useRef(null);
 
   const handleFileChange = (event) => {
     const file = event.target.files[0];
@@ -18,7 +17,7 @@ const Textgenerator = ({ mode }) => {
   };
 
   const handleDivClick = () => {
-    fileInputRef.current.click(); // Programmatically click the file input
+    fileInputRef.current.click();
   };
 
   return (
