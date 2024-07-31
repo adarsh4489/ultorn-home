@@ -6,7 +6,6 @@
   color: white;
   margin: 4rem 0;
   width: 100vw;
-  
 }
 .heading {
   font-weight: 400;
@@ -28,15 +27,15 @@
   font-family: Inter;
   width: 90%;
 }
-.design-small{
-  position:absolute;
+.design-small {
+  position: absolute;
   right: 75rem;
   bottom: 10rem;
 }
 .btn {
- width: 45%;
- padding: 1rem 0;
- 
+  width: 45%;
+  padding: 1rem 0;
+
   background: #8e8e8e21;
   color: white;
   border: none;
@@ -45,27 +44,32 @@
   font-size: 1.5rem;
   font-weight: 400;
 }
-.btn:hover{
+.btn:hover {
   border: 1px solid #00ffff;
-box-shadow: inset 0 0 2rem #b4e6e6;
+  box-shadow: inset 0 0 2rem #b4e6e6;
 }
 
-
-@media  (max-width:532px) {
-.heading{
+@media (max-width: 532px) {
+  .heading {
     font-size: 1.25rem;
-}
-.buttons-container{
+  }
+  .buttons-container {
     gap: 0.75rem;
-}
-.btn{
-width: 9rem;
-font-size: 1rem;
-padding: 0.7rem 0.25rem;
-}
-.generator-container{
+  }
+  .btn {
+    width: 9rem;
+    font-size: 1rem;
+    padding: 0.7rem 0.25rem;
+  }
+  .generator-container {
     margin: 2rem 0;
     gap: 1rem;
-}
+  }
 }
 
+/* Add this to your existing CSS */
+
+.btn.active {
+  border: 1px solid #00ffff;
+  box-shadow: inset 0 0 2rem #b4e6e6;
+}

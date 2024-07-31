@@ -1,57 +1,80 @@
-import React from 'react'
-import './Textgenerator.css'
-import male from '../assets/malesign.png'
-import female from '../assets/female sign.png'
-import upload from '../assets/upload.png';
+/* eslint-disable react/prop-types */
+import { useState, useRef } from "react";
+import "./Textgenerator.css";
+import maleIcon from "../assets/malesign.png";
+import femaleIcon from "../assets/female sign.png";
+import uploadIcon from "../assets/upload.png";
 
-const Textgenerator = () => {
-  
+const Textgenerator = ({ mode }) => {
+  const [selectedFile, setSelectedFile] = useState(null);
+  const fileInputRef = useRef(null); // Create a reference for the file input
+
+  const handleFileChange = (event) => {
+    const file = event.target.files[0];
+    if (file) {
+      setSelectedFile(file);
+      console.log("Selected file:", file);
+    }
+  };
+
+  const handleDivClick = () => {
+    fileInputRef.current.click(); // Programmatically click the file input
+  };
+
   return (
     <div className="wrapper-text-container">
-
       <div className="text-container">
-
         <div className="prompt-container">
-        {/* text area starts here */}
-
-          {/* <textarea name="prompt" placeholder='Enter Your prompt for describing features' id="prompt" rows={12} cols={90}></textarea> */}
-
-          {/* text area ends here this could be removed by the below */}
-
-          {/* imagegenerator starts here*/}
-
-           <div className="upload-image">
-          <img src={upload} alt="" />
-<p><span>Click to upload</span>or <br />Drag and Drop</p>
-<p>Supported formats PNG, JPG, JPEG, WebP</p>
-        </div>  
-
-{/* imagegenerator ends here  this can be kept in some other components and call it accordingly*/}
+          {mode === "text" ? (
+            <textarea
+              name="prompt"
+              placeholder="Enter your prompt describing the features"
+              id="prompt"
+              rows="12"
+              cols="90"
+            />
+          ) : (
+            <div className="upload-image" onClick={handleDivClick}>
+              <img src={uploadIcon} alt="Upload" />
+              <p>
+                <span>Click to upload</span> or <br />
+                Drag and Drop
+              </p>
+              <p>Supported formats: PNG, JPG, JPEG, WebP</p>
+              {selectedFile && <p>Selected file: {selectedFile.name}</p>}
+              <input
+                type="file"
+                accept="image/*"
+                ref={fileInputRef}
+                onChange={handleFileChange}
+                style={{ display: "none" }}
+              />
+            </div>
+          )}
 
           <div className="gender">
             <h2>Choose Gender</h2>
             <div className="male category">
-              <img className='gender-sign' src={male} alt="" />
+              <img className="gender-sign" src={maleIcon} alt="Male" />
               <p>Male</p>
             </div>
             <div className="female category">
-              <img className='gender-sign' src={female} alt="" />
+              <img className="gender-sign" src={femaleIcon} alt="Female" />
               <p>Female</p>
             </div>
           </div>
         </div>
-        <div className="generate-btn">
-            Generate
-        </div>
+
+        <div className="generate-btn">Generate</div>
+
         <div className="suggestions-container">
-                <div className="suggestion">A 55 year old amarican guy with...</div>
-                <div className="suggestion">A young smiling cute korean girl...</div>
-                <div className="suggestion">45 year ol asian guy with clean...</div>
+          <div className="suggestion">A 55-year-old American guy with...</div>
+          <div className="suggestion">A young smiling cute Korean girl...</div>
+          <div className="suggestion">45-year-old Asian guy with clean...</div>
         </div>
       </div>
     </div>
-    
   );
-}
+};
 
-export default Textgenerator
+export default Textgenerator;
