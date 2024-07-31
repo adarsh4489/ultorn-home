@@ -13,8 +13,7 @@ const App = () => {
     
       <Navbar></Navbar>
       <Generator></Generator>
-      <Textgenerator></Textgenerator>
-
+     
 <Cards></Cards>
     </div>
   )
